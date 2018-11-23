@@ -4,10 +4,10 @@ public class CashBackService {
     public int calculateCashBackService(int ordinaryCategory, int increasedCategory, int specialCategory) {
         int maxCashBack = 3000;
 
-        int g = ordinaryCategory / 100;
-        int e = increasedCategory * 5 / 100;
-        int q = specialCategory * 30 / 100;
-        int sum = g + e + q;
+        int regularCashback= ordinaryCategory / 100;
+        int increasedСashback = increasedCategory * 5 / 100;
+        int casbackOnSpecialOffers = specialCategory * 30 / 100;
+        int sum = regularCashback + increasedСashback + casbackOnSpecialOffers;
         if (sum >= maxCashBack) {
             return maxCashBack;
         }
@@ -15,3 +15,4 @@ public class CashBackService {
         return sum;
     }
 }
+
